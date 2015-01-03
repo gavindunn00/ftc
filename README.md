@@ -1,0 +1,4 @@
+ftc
+===
+
+FTC SMITHVILLE HIGH
