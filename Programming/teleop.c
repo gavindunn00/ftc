@@ -99,6 +99,7 @@ while(true)
 		{
 			rDrive = rDrive / 2;
 			lDrive = lDrive / 2;
+
 		}
 		nMotorEncoder[raise] = 0; //Resets encoder to 0
 		//
