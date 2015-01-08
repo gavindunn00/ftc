@@ -111,7 +111,7 @@ while(true)
 }
 	if(joy2Btn(2) == 1)
 	{
-		while (nMotorEncoder[raise] < 1440)
+		while (nMotorEncoder[raise] > 0)
 		{
 	motor[raise] = 50;
 	}
