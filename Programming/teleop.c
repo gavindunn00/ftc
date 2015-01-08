@@ -85,13 +85,6 @@ task main()
 		{
 			collection = -80;
 		}
-		/* -- Lift Mechanism -- */
-		if(joy2Btn(1) == 1) //first spot
-		{
-	   		nMotorEncoder[raise] = 0; //Clears motor(raise) encoder.
-	   		nMotorEncoderTarget[raise] = 1800; //Sets motor to move until encoder is equal to 1800 degrees (first spot)
-	   	  motor[raise] = 75;
-}
 }
 while(true)
 		//Halfspeed button
@@ -101,6 +94,8 @@ while(true)
 			lDrive = lDrive / 2;
 
 		}
+		if(joy2Btn(1) == 1)
+		{
 		nMotorEncoder[raise] = 0; //Resets encoder to 0
 		//
 	  //Power encoders at 50 until the encoders reach one revolution
@@ -113,4 +108,13 @@ while(true)
 	// Stop the motors after done raising
 	//
 	motor[raise] = 0;
+}
+	if(joy2Btn(2) == 1)
+	{
+		while (nMotorEncoder[raise] < 1440)
+		{
+	motor[raise] = 50;
+	}
+	motor[raise] = 0;//Stop motor after raising
+}
 	}
